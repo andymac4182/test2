@@ -17,6 +17,8 @@ on:
         
 jobs: 
   run:
+    name: Deploy to "${{ inputs.environment_name }}"
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Deploy to "${{ inputs.environment_name }}""
       - run: echo "Deploy to "${{ inputs.terraform_apply }}""
