@@ -20,6 +20,6 @@ jobs:
     name: Deploy to "${{ inputs.environment_name }}"
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploy to "${{ inputs.environment_name }}""
-      - run: echo "Deploy to "${{ inputs.terraform_apply }}""
-      - run: echo "Deploy to "${{ inputs.recruit_version }}""
+      - run: echo "Deploy to "${{ github.event.inputs.environment_name }}""
+      - run: echo "Deploy to "${{ github.event.inputs.terraform_apply }}""
+      - run: echo "Deploy to "${{ github.event.inputs.recruit_version }}""
