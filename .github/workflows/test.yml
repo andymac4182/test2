@@ -1,0 +1,23 @@
+name: 'Manual Deploy'
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment_name:
+        required: true
+        type: string
+        default: uat
+      terraform_apply:
+        required: true
+        type: string
+        default: false
+      recruit_version:
+        required: true
+        type: string
+        
+jobs: 
+  run:
+    steps:
+      - run: echo "Deploy to "${{ inputs.environment_name }}""
+      - run: echo "Deploy to "${{ inputs.terraform_apply }}""
+      - run: echo "Deploy to "${{ inputs.recruit_version }}""
